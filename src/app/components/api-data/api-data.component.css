@@ -1,0 +1,119 @@
+/* Container Styling */
+.container {
+  background-color: #1e1e2d; /* Match navbar and form background */
+  color: #ffffff; /* White text for contrast */
+  padding: 2rem;
+  border-radius: 0.5rem; /* Rounded corners for modern look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  max-width: 600px; /* Centered and responsive width */
+  margin: 2rem auto; /* Center the container */
+}
+
+/* Heading Styling */
+.container h1 {
+  text-align: center;
+  color: #f0b429; /* Accent color */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; /* Capitalize for emphasis */
+}
+
+/* Input Section Styling */
+.input-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center; /* Center align inputs and button */
+}
+
+.word-input {
+  flex: 1; /* Stretch input to fill space */
+  padding: 0.8rem;
+  border: 2px solid #f0b429; /* Accent border */
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #282838; /* Subtle background for input */
+  color: #ffffff;
+}
+
+.word-input::placeholder {
+  color: #b3b3b3; /* Subtle placeholder color */
+}
+
+.fetch-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #f0b429; /* Accent color */
+  color: #1e1e2d; /* Dark text for contrast */
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.fetch-button:hover {
+  background-color: #d89e24; /* Slightly darker shade on hover */
+  transform: scale(1.05); /* Enlarge slightly on hover */
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #ff6b6b; /* Bright red for visibility */
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Word Data Styling */
+.container h2 {
+  color: #f0b429; /* Accent color for emphasis */
+  margin-bottom: 0.5rem;
+}
+
+.container p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+/* Audio Styling */
+audio {
+  display: block;
+  margin: 1rem 0;
+}
+
+/* Meanings Section */
+.meanings {
+  margin-top: 1.5rem;
+}
+
+.meanings h3 {
+  color: #f0b429; /* Accent color for headings */
+  margin-bottom: 1rem;
+}
+
+.meanings p {
+  margin-bottom: 0.5rem;
+}
+
+.meanings ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.meanings li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .word-input, .fetch-button {
+    width: 100%; /* Full width for smaller screens */
+  }
+}

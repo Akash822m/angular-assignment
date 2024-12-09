@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Dictionary</h1>
+    <div class="input-section">
+      <input
+        type="text"
+        placeholder="Enter a word"
+        [(ngModel)]="word"
+        class="word-input"
+      />
+      <button (click)="fetchWordData()" class="fetch-button">Get Meaning</button>
+    </div>
+  
+    <!-- Error Message -->
+    <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  
+    <!-- Word Data -->
+    <div *ngIf="wordData && !errorMessage">
+      <h2>Word: {{ wordData[0]?.word }}</h2>
+      <p><strong>Phonetic:</strong> {{ wordData[0]?.phonetic }}</p>
+      <audio *ngIf="wordData[0]?.phonetics?.[0]?.audio" controls>
+        <source [src]="wordData[0]?.phonetics?.[0]?.audio" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+  
+      <div class="meanings">
+        <h3>Meanings:</h3>
+        <div *ngFor="let meaning of wordData[0]?.meanings">
+          <p><strong>Part of Speech:</strong> {{ meaning.partOfSpeech }}</p>
+          <ul>
+            <li *ngFor="let definition of meaning.definitions">
+              {{ definition.definition }}
+              <span *ngIf="definition.example"><br /><em>Example:</em> {{ definition.example }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

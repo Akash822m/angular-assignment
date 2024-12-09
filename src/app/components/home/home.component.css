@@ -1,0 +1,74 @@
+/* Styling for the home page container */
+.home-container {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e2d; /* Same dark background as navbar */
+    color: #ffffff; /* White text for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+  }
+  
+  /* Title styling */
+  .home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f0b429; /* Accent color for the title */
+    margin-bottom: 1rem;
+  }
+  
+  /* Description styling */
+  .home-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #dcdcdc; /* Light gray for subtle elegance */
+  }
+  
+  /* Button container */
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  /* Button styling */
+  .home-button {
+    text-decoration: none;
+    background-color: #f0b429; /* Accent background */
+    color: #1e1e2d; /* Contrasting dark text */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  /* Hover effect for buttons */
+  .home-button:hover {
+    background-color: #e0a121; /* Darker shade for hover */
+    transform: translateY(-3px); /* Lift effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 1.5rem;
+    }
+  
+    .home-title {
+      font-size: 2rem;
+    }
+  
+    .home-description {
+      font-size: 1rem;
+    }
+  
+    .home-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

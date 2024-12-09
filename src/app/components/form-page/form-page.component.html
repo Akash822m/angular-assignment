@@ -1,0 +1,44 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" />
+      <div *ngIf="submitted && formControls['name'].errors?.['required']" class="error">
+        <small>Name is required.</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" />
+      <div *ngIf="submitted && formControls['email'].errors?.['required']" class="error">
+        <small>Email is required.</small>
+      </div>
+      <div *ngIf="submitted && formControls['email'].errors?.['email']" class="error">
+        <small>Enter a valid email address.</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" formControlName="phone" />
+      <div *ngIf="submitted && formControls['phone'].errors?.['required']" class="error">
+        <small>Phone number is required.</small>
+      </div>
+      <div *ngIf="submitted && formControls['phone'].errors?.['pattern']" class="error">
+        <small>Enter a valid 10-digit phone number.</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="suggestion">Suggestion</label>
+      <textarea id="suggestion" formControlName="suggestion"></textarea>
+      <div *ngIf="submitted && formControls['suggestion'].errors?.['required']" class="error">
+        <small>Suggestion is required.</small>
+      </div>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+ 
+  

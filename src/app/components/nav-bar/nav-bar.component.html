@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    </li>
+    <li>
+      <a routerLink="/api-data" routerLinkActive="active-link">API Data</a>
+    </li>
+    <li>
+      <a routerLink="/form" routerLinkActive="active-link">Form</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
