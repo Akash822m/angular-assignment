@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
 
+this project utilises the api provided by https://dictionaryapi.dev/ You can enter the word and click on get meaning to get the meaing, phonetics and usage examples of the word.
+
+This website is deployed on vercel Please visit the link below: https://angular-assignment-snowy.vercel.app/home
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
